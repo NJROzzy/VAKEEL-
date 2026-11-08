@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vakeel — India's Courts & Advocates</title>
-  <meta name="description" content="Vakeel (वकील): a clear guide to the Indian judicial system, its courts, and the advocates who practise in them." />
+  <title>JusticeSystem — Understand your case</title>
+  <meta name="description" content="JusticeSystem: understand your legal problem in India and find the path forward: where to go, what to do, and who can help." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,12 @@
 </head>
 <body>
   <header class="nav">
-    <a href="#top" class="brand"><span class="brand-hi">वकील</span> Vakeel</a>
+    <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">⚖</span>Justice<span class="brand-accent">System</span></a>
     <nav>
+      <a href="#paths">Find your path</a>
+      <a href="#first-steps">First steps</a>
       <a href="#courts">Courts</a>
       <a href="#vakeel">The Vakeel</a>
-      <a href="#become">Become one</a>
       <a href="#aid">Legal aid</a>
       <a href="#glossary">Glossary</a>
     </nav>
@@ -26,17 +27,40 @@
   <main id="top">
     <section class="hero">
       <p class="eyebrow">सत्यमेव जयते · Truth alone triumphs</p>
-      <h1>Justice in India,<br />and the people who argue for it.</h1>
-      <p class="lede">A plain-language guide to how India's courts are organised, what a <em>vakeel</em> (advocate) does, and how ordinary citizens can find legal help.</p>
-      <div class="stats">
-        <div><strong>1</strong><span>Supreme Court</span></div>
-        <div><strong>25</strong><span>High Courts</span></div>
-        <div><strong>600+</strong><span>Judicial districts</span></div>
-        <div><strong>1950</strong><span>Constitution in force</span></div>
+      <h1>Understand your case.<br />Find your path.</h1>
+      <p class="lede">Facing a legal problem in India? Pick your situation and see, in plain language, what kind of case it is, where to go, what to do first, and who can help, often for free.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#paths">Find your path ↓</a>
+        <a class="btn ghost" href="tel:15100">Free legal aid: 15100</a>
       </div>
     </section>
 
+    <section id="paths" class="section finder">
+      <h2>What's your situation?</h2>
+      <p class="intro">Choose the problem closest to yours. Each path shows the steps, documents, deadlines and helplines.</p>
+      <div class="finder-controls">
+        <input id="path-search" type="search" placeholder="Search, e.g. bail, refund, divorce, land…" aria-label="Search situations" />
+        <div id="cat-chips" class="chips" role="group" aria-label="Filter by category"></div>
+      </div>
+      <div id="path-grid" class="path-grid"></div>
+      <article id="path-detail" class="path-detail" hidden aria-live="polite"></article>
+    </section>
+
+    <section id="first-steps" class="section alt">
+      <h2>First steps for any legal problem</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><div><h3>Write it down</h3><p>Note dates, places, people and amounts while you remember them. A clear timeline helps your lawyer and the court.</p></div></li>
+        <li><span class="num">2</span><div><h3>Keep every paper</h3><p>Keep the originals safe and make copies. Save messages, emails, receipts and photos, and back them up.</p></div></li>
+        <li><span class="num">3</span><div><h3>Watch the deadline</h3><p>Most claims have a time limit under the Limitation Act. Some, like cheque bounce, are counted in days.</p></div></li>
+        <li><span class="num">4</span><div><h3>Civil or criminal?</h3><p><b>Criminal</b>: an offence against society; police and prosecution are involved. <b>Civil</b>: a private dispute over money, property, family or contracts.</p></div></li>
+        <li><span class="num">5</span><div><h3>Try to settle</h3><p>A legal notice, mediation or a Lok Adalat can resolve disputes faster and cheaper, and a Lok Adalat award is final.</p></div></li>
+        <li><span class="num">6</span><div><h3>Get the right help</h3><p>Consult a vakeel. If you can't afford one, your District Legal Services Authority provides one free.</p></div></li>
+      </ol>
+      <p class="note">Already in court? Track hearings and orders on <a href="https://ecourts.gov.in" target="_blank" rel="noopener">eCourts</a> using your case's CNR number.</p>
+    </section>
+
     <section id="courts" class="section">
+      <p class="kicker">Learn the system</p>
       <h2>The structure of the courts</h2>
       <p class="intro">India has a single, integrated judiciary. Unlike federal systems with separate state and national courts, every court sits in one hierarchy with the Supreme Court at the top, and its rulings bind all courts below (Article 141).</p>
 
@@ -248,8 +272,9 @@
   </main>
 
   <footer>
-    <p><span class="brand-hi">वकील</span> Vakeel · An educational guide to the Indian judicial system.</p>
+    <p><b>JusticeSystem</b> · Understand your case and find your path through India's justice system.</p>
     <p class="small">This site gives general information, not legal advice. For your specific situation, please consult a qualified advocate.</p>
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
