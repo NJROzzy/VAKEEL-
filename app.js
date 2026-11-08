@@ -333,3 +333,7 @@ renderChips();
 renderGrid();
 const initial = location.hash.slice(1);
 if (PATHS.some(p => p.id === initial)) showPath(initial);
+window.addEventListener("hashchange", () => {
+  const id = location.hash.slice(1);
+  if (PATHS.some(p => p.id === id)) showPath(id);
+});

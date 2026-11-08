@@ -16,6 +16,7 @@
     <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">⚖</span>Justice<span class="brand-accent">System</span></a>
     <nav>
       <a href="#paths">Find your path</a>
+      <a href="#analysis">Case analysis</a>
       <a href="#first-steps">First steps</a>
       <a href="#courts">Courts</a>
       <a href="#vakeel">The Vakeel</a>
@@ -31,6 +32,7 @@
       <p class="lede">Facing a legal problem in India? Pick your situation and see, in plain language, what kind of case it is, where to go, what to do first, and who can help, often for free.</p>
       <div class="hero-cta">
         <a class="btn" href="#paths">Find your path ↓</a>
+        <a class="btn ghost" href="#analysis">Analyse my case</a>
         <a class="btn ghost" href="tel:15100">Free legal aid: 15100</a>
       </div>
     </section>
@@ -44,6 +46,33 @@
       </div>
       <div id="path-grid" class="path-grid"></div>
       <article id="path-detail" class="path-detail" hidden aria-live="polite"></article>
+    </section>
+
+    <section id="analysis" class="section analysis">
+      <p class="kicker">New · AI case analysis</p>
+      <h2>See both sides of your case</h2>
+      <p class="intro">Most cases that reach court sit in a <b>gray area</b>. Describe your situation and two AI lawyers will argue it: the <b class="good-text">Good Lawyer</b> makes your best case, and the <b class="devil-text">Devil's Lawyer</b> argues what the other side will say. Hearing the hard arguments now helps you prepare.</p>
+
+      <form id="analysis-form" class="an-form">
+        <label for="an-story">What happened?</label>
+        <textarea id="an-story" name="story" rows="7" maxlength="4000" placeholder="Describe your situation: what happened, when, who is involved, what documents or proof you have, and what you want." required></textarea>
+        <div class="an-meta">
+          <button type="button" id="an-example" class="link-btn">Try an example</button>
+          <span id="an-count">0 / 4000</span>
+        </div>
+        <div class="an-row">
+          <div><label for="an-side">You are… <small>(optional)</small></label><input id="an-side" name="side" maxlength="200" placeholder="e.g. tenant, buyer, employee, the accused" /></div>
+          <div><label for="an-other">The other side is… <small>(optional)</small></label><input id="an-other" name="otherSide" maxlength="200" placeholder="e.g. landlord, company, my brother" /></div>
+          <div><label for="an-state">State / UT <small>(optional)</small></label><input id="an-state" name="state" maxlength="60" list="states" placeholder="e.g. Delhi" /></div>
+        </div>
+        <datalist id="states">
+          <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Delhi</option><option>Jammu and Kashmir</option><option>Ladakh</option><option>Chandigarh</option><option>Puducherry</option><option>Andaman and Nicobar Islands</option><option>Dadra and Nagar Haveli and Daman and Diu</option><option>Lakshadweep</option>
+        </datalist>
+        <p class="privacy">🔒 Don't include names, phone numbers, addresses or ID numbers. Use "my landlord" or "Person A" instead. Your description is sent to an AI service to produce the analysis and is not stored on this site.</p>
+        <button type="submit" class="btn">Analyse both sides</button>
+      </form>
+
+      <div id="analysis-result" class="an-result" hidden aria-live="polite"></div>
     </section>
 
     <section id="first-steps" class="section alt">
@@ -276,5 +305,6 @@
     <p class="small">This site gives general information, not legal advice. For your specific situation, please consult a qualified advocate.</p>
   </footer>
   <script src="app.js"></script>
+  <script src="analysis.js"></script>
 </body>
 </html>
